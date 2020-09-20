@@ -1,0 +1,54 @@
+body{
+     /*background-image: url(../img/Fancy_1.gif) ; */ /*Путь к фоновому изображению*/
+        background-color:#6e00cf; /*#470b87 ;*/
+        margin: 0;
+
+}
+
+header {
+ display: block; /* Для старых браузеров */
+ height: 100px; /* Высота шапки */
+ width:100%;
+ background-color: #c47ff5;
+ padding: 0;
+ margin: 0;
+}
+
+#text{
+    color:#fff;
+    margin:50px;
+    marginleft:50px;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 300%; /* Размер шрифта в процентах */
+    text-align: center;
+
+
+}
+#text1{
+    color:#fff;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 500%; /* Размер шрифта в процентах */
+    text-align: center;
+}
+
+#add{
+    color: #fc3865;
+}
+
+#shapka{
+    color:#ffffff
+    font-size:100px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
