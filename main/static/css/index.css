@@ -1,0 +1,852 @@
+body{
+     /*background-image: url(../img/Fancy_1.gif) ; */ /*Путь к фоновому изображению*/
+        background-color: #6e00cf; /*#470b87 ;*/
+        margin: 0;
+
+}
+
+header {
+    bs-blue: #0d6efd;
+    bs-indigo: #6610f2;
+    bs-purple: #6f42c1;
+    bs-pink: #d63384;
+    bs-red: #dc3545;
+    bs-orange: #fd7e14;
+    bs-yellow: #ffc107;
+    bs-green: #198754;
+    bs-teal: #20c997;
+    bs-cyan: #0dcaf0;
+    bs-white: #fff;
+    bs-gray: #6c757d;
+    bs-gray-dark: #343a40;
+    bs-primary: #0d6efd;
+    bs-secondary: #6c757d;
+    bs-success: #198754;
+    bs-info: #0dcaf0;
+    bs-warning: #ffc107;
+    bs-danger: #dc3545;
+    bs-light: #f8f9fa;
+    bs-dark: #212529;
+    bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    webkit-tap-highlight-color: transparent;
+    color: #5a5a5a;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #212529!important;
+
+}
+
+
+
+
+
+/* Шапка VIP */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  left: 9%;
+  padding: 0;
+}
+
+
+.buttons {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.blob-btn {
+  z-index: 1;
+  position: relative;
+  padding: 100px 600px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fffc2e;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: #2939e3;
+  outline: none;
+  border: none;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius: 15px;
+
+}
+.blob-btn:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 6px solid #fffc2e;
+  border-radius: 15px;
+}
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  width: 100%;
+  height: 100%;
+  border: 6px solid #222;
+  -webkit-transition: all 0.3s 0.2s;
+  transition: all 0.3s 0.2s;
+  border-radius: 15px;
+}
+.blob-btn:hover {
+  color: #222;
+}
+.blob-btn:hover:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+}
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  -webkit-filter: url("#goo");
+          filter: url("#goo");
+}
+.blob-btn__blob {
+  position: absolute;
+  top: 6px;
+  width: 25%;
+  height: 100%;
+  background: #0fe0f5;
+  border-radius: 100%;
+  -webkit-transform: translate3d(0, 150%, 0) scale(1.7);
+          transform: translate3d(0, 150%, 0) scale(1.7);
+  -webkit-transition: -webkit-transform 0.45s;
+  transition: -webkit-transform 0.45s;
+  transition: transform 0.45s;
+  transition: transform 0.45s, -webkit-transform 0.45s;
+}
+@supports ((-webkit-filter: url("#goo")) or (filter: url("#goo"))) {
+  .blob-btn__blob {
+    -webkit-transform: translate3d(0, 150%, 0) scale(1.4);
+            transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+}
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  -webkit-transition-delay: 0.08s;
+          transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  -webkit-transition-delay: 0.16s;
+          transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  -webkit-transition-delay: 0.24s;
+          transition-delay: 0.24s;
+}
+.blob-btn:hover .blob-btn__blob {
+  -webkit-transform: translateZ(0) scale(1.7);
+          transform: translateZ(0) scale(1.7);
+}
+@supports ((-webkit-filter: url("#goo")) or (filter: url("#goo"))) {
+  .blob-btn:hover .blob-btn__blob {
+    -webkit-transform: translateZ(0) scale(1.4);
+            transform: translateZ(0) scale(1.4);
+  }
+}
+
+
+
+
+
+
+
+
+/* Шапка которая переворачивается 0 */
+
+.btnflip {
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  margin-bottom:50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center center;
+}
+.btnflip-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height:60px;
+  font-size: 24px;
+  background-color: rgba(255,255,255, .05);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 1s;
+}
+.btnflip-item.btnflip__front {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip:hover .btnflip-item.btnflip__front {
+  transform: rotateX(-180deg) translateZ(20px);
+}
+.btnflip-item.btnflip__back {
+  transform: rotateX(180deg) translateZ(20px);
+}
+.btnflip:hover .btnflip-item.btnflip__back {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip-item.btnflip__center {
+  background: linear-gradient(to left, #c31a5b, #7129bd);
+}
+.btnflip-item.btnflip__center::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #ffdd1f, #c31a5b);
+  border-radius: 30px;
+  transform: translateZ(-1px);
+}
+.btnflip:hover .btnflip-item.btnflip__center {
+  transform: rotateX(-180deg);
+}
+
+
+/* Шапка которая переворачивается 1 */
+
+.btnflip1 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-bottom:50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center center;
+}
+.btnflip-item1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  background-color: rgba(255,255,255, .05);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 1s;
+
+
+}
+.btnflip-item1.btnflip__front1 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip1:hover .btnflip-item1.btnflip__front1 {
+  transform: rotateX(-180deg) translateZ(20px);
+}
+.btnflip-item1.btnflip__back1 {
+  transform: rotateX(180deg) translateZ(20px);
+}
+.btnflip1:hover .btnflip-item1.btnflip__back1 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip-item1.btnflip__center1 {
+  background: linear-gradient(to left, #c31a5b, #7129bd);
+}
+.btnflip-item1.btnflip__center1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #ffdd1f, #c31a5b);
+  border-radius: 30px;
+  transform: translateZ(-1px);
+}
+.btnflip1:hover .btnflip-item1.btnflip__center1 {
+  transform: rotateX(-180deg);
+}
+
+
+
+/* Шапка которая переворачивается 2 */
+
+.btnflip2 {
+  position: absolute;
+  top: 100%;
+  left: 80%;
+  margin-bottom:50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center center;
+}
+.btnflip-item2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  background-color: rgba(255,255,255, .05);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 1s;
+
+
+}
+.btnflip-item2.btnflip__front2 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip2:hover .btnflip-item2.btnflip__front2 {
+  transform: rotateX(-180deg) translateZ(20px);
+}
+.btnflip-item2.btnflip__back2 {
+  transform: rotateX(180deg) translateZ(20px);
+}
+.btnflip2:hover .btnflip-item2.btnflip__back2 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip-item2.btnflip__center2 {
+  background: linear-gradient(to left, #c31a5b, #7129bd);
+}
+.btnflip-item2.btnflip__center2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #ffdd1f, #c31a5b);
+  border-radius: 30px;
+  transform: translateZ(-1px);
+}
+.btnflip2:hover .btnflip-item2.btnflip__center2 {
+  transform: rotateX(-180deg);
+}
+
+
+/* Шапка которая переворачивается 3 */
+
+.btnflip3 {
+  position: absolute;
+  top: 150%;
+  left: 20%;
+  margin-bottom:50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center center;
+}
+
+.btnflip-item3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  background-color: rgba(255,255,255, .05);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 1s;
+
+}
+.btnflip-item3.btnflip__front3 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip3:hover .btnflip-item3.btnflip__front3 {
+  transform: rotateX(-180deg) translateZ(20px);
+}
+.btnflip-item3.btnflip__back3 {
+  transform: rotateX(180deg) translateZ(20px);
+}
+.btnflip3:hover .btnflip-item3.btnflip__back3 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip-item3.btnflip__center3 {
+  background: linear-gradient(to left, #c31a5b, #7129bd);
+}
+.btnflip-item3.btnflip__center3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #ffdd1f, #c31a5b);
+  border-radius: 30px;
+  transform: translateZ(-1px);
+}
+.btnflip3:hover .btnflip-item3.btnflip__center3 {
+  transform: rotateX(-180deg);
+}
+
+/* Шапка которая переворачивается 4 */
+.btnflip4 {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  margin-bottom:50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center center;
+}
+
+.btnflip-item4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  background-color: rgba(255,255,255, .05);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 1s;
+
+}
+.btnflip-item4.btnflip__front4 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip4:hover .btnflip-item4.btnflip__front4 {
+  transform: rotateX(-180deg) translateZ(20px);
+}
+.btnflip-item4.btnflip__back4{
+  transform: rotateX(180deg) translateZ(20px);
+}
+.btnflip4:hover .btnflip-item4.btnflip__back4 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip-item4.btnflip__center4 {
+  background: linear-gradient(to left, #c31a5b, #7129bd);
+}
+.btnflip-item4.btnflip__center4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #ffdd1f, #c31a5b);
+  border-radius: 30px;
+  transform: translateZ(-1px);
+}
+.btnflip4:hover .btnflip-item4.btnflip__center4 {
+  transform: rotateX(-180deg);
+}
+
+/* Шапка которая переворачивается 5 */
+
+.btnflip5 {
+  position: absolute;
+  top: 150%;
+  left: 80%;
+  margin-bottom:50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center center;
+}
+.btnflip-item5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  background-color: rgba(255,255,255, .05);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 1s;
+
+
+}
+.btnflip-item5.btnflip__front5 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip5:hover .btnflip-item5.btnflip__front5{
+  transform: rotateX(-180deg) translateZ(20px);
+}
+.btnflip-item5.btnflip__back5 {
+  transform: rotateX(180deg) translateZ(20px);
+}
+.btnflip5:hover .btnflip-item5.btnflip__back5 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip-item5.btnflip__center5 {
+  background: linear-gradient(to left, #c31a5b, #7129bd);
+}
+.btnflip-item5.btnflip__center5::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #ffdd1f, #c31a5b);
+  border-radius: 30px;
+  transform: translateZ(-1px);
+}
+.btnflip5:hover .btnflip-item5.btnflip__center5{
+  transform: rotateX(-180deg);
+}
+
+/* Шапка которая переворачивается 6 */
+
+.btnflip6 {
+  position: absolute;
+  top: 200%;
+  left: 20%;
+  margin-bottom:50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center center;
+}
+.btnflip-item6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  background-color: rgba(255,255,255, .05);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 1s;
+
+
+}
+.btnflip-item6.btnflip__front6 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip6:hover .btnflip-item6.btnflip__front6{
+  transform: rotateX(-180deg) translateZ(20px);
+}
+.btnflip-item6.btnflip__back6 {
+  transform: rotateX(180deg) translateZ(20px);
+}
+.btnflip6:hover .btnflip-item6.btnflip__back6 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip-item6.btnflip__center6 {
+  background: linear-gradient(to left, #c31a5b, #7129bd);
+}
+.btnflip-item6.btnflip__center6::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #ffdd1f, #c31a5b);
+  border-radius: 30px;
+  transform: translateZ(-1px);
+}
+.btnflip6:hover .btnflip-item6.btnflip__center6{
+  transform: rotateX(-180deg);
+}
+
+/* Шапка которая переворачивается 7 */
+
+.btnflip7 {
+  position: absolute;
+  top: 200%;
+  left: 50%;
+  margin-bottom:50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center center;
+}
+.btnflip-item7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  background-color: rgba(255,255,255, .05);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 1s;
+
+
+}
+.btnflip-item7.btnflip__front7 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip7:hover .btnflip-item7.btnflip__front7{
+  transform: rotateX(-180deg) translateZ(20px);
+}
+.btnflip-item7.btnflip__back7 {
+  transform: rotateX(180deg) translateZ(20px);
+}
+.btnflip7:hover .btnflip-item7.btnflip__back7 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip-item7.btnflip__center7 {
+  background: linear-gradient(to left, #c31a5b, #7129bd);
+}
+.btnflip-item7.btnflip__center7::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #ffdd1f, #c31a5b);
+  border-radius: 30px;
+  transform: translateZ(-1px);
+}
+.btnflip7:hover .btnflip-item7.btnflip__center7{
+  transform: rotateX(-180deg);
+}
+
+/* Шапка которая переворачивается 8 */
+
+.btnflip8 {
+  position: absolute;
+  top: 200%;
+  left: 80%;
+  margin-bottom:50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center center;
+}
+.btnflip-item8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  background-color: rgba(255,255,255, .05);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 1s;
+
+
+}
+.btnflip-item8.btnflip__front8 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip8:hover .btnflip-item8.btnflip__front8{
+  transform: rotateX(-180deg) translateZ(20px);
+}
+.btnflip-item8.btnflip__back8 {
+  transform: rotateX(180deg) translateZ(20px);
+}
+.btnflip8:hover .btnflip-item8.btnflip__back8 {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip-item8.btnflip__center8 {
+  background: linear-gradient(to left, #c31a5b, #7129bd);
+}
+.btnflip-item8.btnflip__center8::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #ffdd1f, #c31a5b);
+  border-radius: 30px;
+  transform: translateZ(-1px);
+}
+.btnflip8:hover .btnflip-item8.btnflip__center8{
+  transform: rotateX(-180deg);
+}
+
+
+/* кнопка СИНЯЯ */
+/* кнопка для шапки 1 */
+$sea: #39cde9;
+
+button.shapka {
+  background: $sea;
+  padding: 2em;
+  min-width: 200px;
+  display: inline-block;
+  font-family: 'interstate', monospace;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 50px -5px $sea;
+  transition: box-shadow 6s;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    height: 0;
+    padding-bottom: 200%;
+    background: darken($sea, 1%);
+    mix-blend-mode: color-burn;
+    top: 0;
+    z-index: -1;
+    border-radius: 230px;
+    transition: transform 2.5s, background 6s;
+  }
+
+  &:after {
+    // border-top-right-radius: 40%;
+    // border-bottom-left-radius: 40%;
+    transform: translate3d(-5%,6em,0) rotate(-45deg);
+  }
+
+  &:before {
+    // border-bottom-right-radius: 40%;
+    // border-top-left-radius: 40%;
+    transform: translate3d(5%,6em,0) rotate(0deg);
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 50px -5px darken($sea, 20%);
+
+    &:before,
+    &:after {
+      transform: translate3d(0,-5em,0) rotate(180deg);
+      background: darken($sea, 20%);
+
+    }
+  }
+}
+
+
+
+#down_banner{
+     margin-top:60%;
+     display: block; /* Для старых браузеров */
+     height: 100px; /* Высота шапки */
+     background-color: #c47ff5;
+}
+#AP{
+    margin-top:50%;
+    text-align: center;
+
+}
+
