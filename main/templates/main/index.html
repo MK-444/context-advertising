@@ -1,1 +1,119 @@
-<!DOCTYPE html><html lang="en"><head>  <title>littl advert  </title>  <meta name="description" content="Likefi" />  <meta charset="utf-8" />  <meta name="theme-color" content="#333333">  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />    {% load static %}  <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">  <link href="{% static 'js/buttonblue.js' %}" rel="stylesheet" type="text/js">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  <!-- <![endif]--></head><body><header>  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">    <div class="container-fluid">      <a class="navbar-brand" href="#">Ads</a>      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">        <span class="navbar-toggler-icon"></span>      </button>      <div class="collapse navbar-collapse" id="navbarCollapse">        <ul class="navbar-nav me-auto mb-2 mb-md-0">          <li class="nav-item active">            <a class="nav-link" aria-current="page" href="/">Главная</a>          </li>          <li class="nav-item">            <a class="nav-link" href="/about">О Нас</a>          </li>          <li class="nav-item">            <a class="nav-link" href="/contacts">Заказать</a>          </li>        </ul>        <form class="d-flex">          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">          <button class="btn btn-outline-success" type="submit">Search</button>        </form>      </div>    </div>  </nav></header><div id="body">    <div class="buttons">     <a href="/contacts"><button class="blob-btn">        VIP         <span class="blob-btn__inner">          <span class="blob-btn__blobs">            <span class="blob-btn__blob"></span>            <span class="blob-btn__blob"></span>            <span class="blob-btn__blob"></span>            <span class="blob-btn__blob"></span>          </span>        </span>      </button></a>      <br/>    </div>    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">      <defs>        <filter id="goo">          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>          <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>        </filter>      </defs>    </svg> <!--Шапка которая переворачивается 0 -->    <a class="btnflip" href="/contacts">         {% for el  in news %}        <div class='alert alert warning'>            <h3>{{el.title}}</h3>            <p>{{ el.link }}</p>        </div>        {% endfor %}         <!--Шапка которая переворачивается 0 -->            <span class="btnflip-item btnflip__front">Здесь<br>может быть<br>ваше<br>обьявление</span>            <span class="btnflip-item btnflip__center"></span>            <span class="btnflip-item btnflip__back">РАЗМЕСТИТЬ</span></a>    <!--Шапка которая переворачивается 1 -->    <a class="btnflip1" href="/contacts">                <span class="btnflip-item1 btnflip__front1">Здесь<br>может быть<br>ваше<br>обьявление</span>                <span class="btnflip-item1 btnflip__center1"></span>                <span class="btnflip-item1 btnflip__back1">РАЗМЕСТИТЬ</span>        </a>    <!--Шапка которая переворачивается 2 -->    <a class="btnflip2" href="/contacts">                    <span class="btnflip-item2 btnflip__front2">Здесь<br>может быть<br>ваше<br>обьявление</span>                    <span class="btnflip-item2 btnflip__center2"></span>                    <span class="btnflip-item2 btnflip__back2">РАЗМЕСТИТЬ</span>        <!--Шапка которая переворачивается 3 -->    <a class="btnflip3" href="/contacts">                <span class="btnflip-item3 btnflip__front3">Здесь<br>может быть<br>ваше<br>обьявление</span>                <span class="btnflip-item3 btnflip__center3"></span>                <span class="btnflip-item3 btnflip__back3">РАЗМЕСТИТЬ</span>         <!--Шапка которая переворачивается 4 -->    <a class="btnflip4" href="/contacts">                <span class="btnflip-item4 btnflip__front4">Здесь<br>может быть<br>ваше<br>обьявление</span>                <span class="btnflip-item4 btnflip__center4"></span>                <span class="btnflip-item4 btnflip__back4">РАЗМЕСТИТЬ</span>         <!--Шапка которая переворачивается 5 -->    <a class="btnflip5" href="/contacts">                <span class="btnflip-item5 btnflip__front5">Здесь<br>может быть<br>ваше<br>обьявление</span>                <span class="btnflip-item5 btnflip__center5"></span>                <span class="btnflip-item5 btnflip__back5">РАЗМЕСТИТЬ</span>         <!--Шапка которая переворачивается 6 -->    <a class="btnflip6" href="/contacts">                <span class="btnflip-item6 btnflip__front6">Здесь<br>может быть<br>ваше<br>обьявление</span>                <span class="btnflip-item6 btnflip__center6"></span>                <span class="btnflip-item6 btnflip__back6">РАЗМЕСТИТЬ</span>         <!--Шапка которая переворачивается 7 -->    <a class="btnflip7" href="/contacts">                <span class="btnflip-item7 btnflip__front7">Здесь<br>может быть<br>ваше<br>обьявление</span>                <span class="btnflip-item7 btnflip__center7"></span>                <span class="btnflip-item7 btnflip__back7">РАЗМЕСТИТЬ</span>         <!--Шапка которая переворачивается 8 -->    <a class="btnflip8" href="/contacts">                <span class="btnflip-item8 btnflip__front8">Здесь<br>может быть<br>ваше<br>обьявление</span>                <span class="btnflip-item8 btnflip__center8"></span>                <span class="btnflip-item8 btnflip__back8">РАЗМЕСТИТЬ</span>            </a></div></body><footer id="down_banner">    <p id="AP">©Все права защищены.</p></footer></html>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'main/style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="flex space-x-7">
+
+          </div>
+          <div>
+            <a href="" class="flex items-center py-4 px-2">
+              <span class="text-lg text-gray-500 font-semibold">Ads</span>
+            </a>
+          </div>
+
+          <div class="md:flex items-center space-x-1">
+
+          </div>
+        </div>
+        
+
+      </div>
+
+    </nav>
+
+    <form class="bg-white m-20 shadow-md mb-4 pb-8 rounded pt-6 px-8" method="post">
+      {% csrf_token %}
+      <div class="mb-4">
+        <label for="url" class="block text-gray-700 text-sm font-bold mb-2"
+          >Enter URL</label
+        >
+        <input
+          class="
+            shadow
+            border
+            rounded
+            appearance-none
+            w-full
+            py-2
+            px-3
+            text-gray-700
+            leading-tight
+            focus:outline:none focus:shadow-outline
+          "
+          type="text"
+          id="url"
+          name="url"
+        />
+      </div>
+      <input
+        class="
+          bg-blue-500
+          text-white
+          hover:bg-blue-700
+          font-bold
+          py-2
+          px-4
+          rounded
+        "
+        type="submit"
+      />
+    </form>
+    <div class="p-10 m-10">
+      <h3 class="block text-gray-700 text-sm font-bold mb-2">
+        Common Words: {% for word in commonwords %}
+
+        <span
+          class="
+            inline-flex
+            items-center
+            justify-center
+            px-2
+            py-1
+            text-xs
+            font-bold
+            text-white
+            bg-green-600
+            rounded-full
+          "
+          >{{word}}</span
+        >
+
+        {% endfor %}
+      </h3>
+
+      <h3 class="py-10">Ads found</h3>
+
+
+      <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+{% for ad in relevantads %}
+      
+      <a href="{{ ad.ad_url }}">
+        <div class="rounded shadow-lg overflow-hidden">
+ <img
+         class="w-full"
+          src="http://127.0.0.1:8000/{{ ad.image }}"
+          alt=""
+        />
+        <div class="font-bold text-xl mb-2" >{{ad.name}}</div>
+        <div class="font-bold mb-2">Ad URL:<span class="">{{ad.ad_url}}</span></div>
+        </div>
+       
+      </a>
+      {% endfor %}
+
+      </div>
+      
+    </div>
+  </body>
+</html>

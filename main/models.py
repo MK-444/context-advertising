@@ -1,13 +1,18 @@
 from django.db import models
 
-# Create your models here.
-class Task(models.Model):
-    title = models.CharField('Название', max_length=50)
-    task = models.TextField('Описание')
+
+class Tag(models.Model):
+    tagname = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.title
+        return self.tagname
 
-    class Meta:
-        verbose_name='Задача'
-        verbose_name_plural = 'Задачи'
+
+class Advert(models.Model):
+    name = models.CharField(max_length=200)
+    tags = models.ManyToManyField(Tag)
+    image = models.ImageField(upload_to='image/')
+    ad_url = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name
